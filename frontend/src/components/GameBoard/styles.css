@@ -1,0 +1,192 @@
+/* src/components/GameBoard/styles.css */
+
+/* Game Board Container */
+.game-board-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.game-board-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Slots Information */
+.slots-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* Game Board */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  background-color: rgba(30, 30, 50, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 220px;
+  width: 100%;
+}
+
+/* Item Slot */
+.item-slot {
+  height: 200px;
+  background-color: rgba(60, 60, 80, 0.5);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.item-slot:hover {
+  background-color: rgba(70, 70, 100, 0.7);
+}
+
+.item-slot.filled {
+  cursor: default;
+  background-color: rgba(40, 40, 70, 0.95);
+  padding: 0;
+}
+
+.slot-width-1 {
+  grid-column: span 1;
+}
+
+.slot-width-2 {
+  grid-column: span 2;
+}
+
+.slot-width-3 {
+  grid-column: span 3;
+}
+
+/* Placeholder for slots occupied by multi-slot items */
+.slot-placeholder {
+  display: none;
+}
+
+/* Placed Item */
+.placed-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #2e2e46; /* Slightly lighter than slots */
+}
+
+.item-width-1 {
+  width: 100%;
+}
+
+.item-width-2 {
+  width: 100%;
+}
+
+.item-width-3 {
+  width: 100%;
+}
+
+.item-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Add a decorative border like in your reference */
+.placed-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #59a9ff;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.placed-item::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  border: 1px solid #a3d5ff;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.remove-item-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(200, 50, 50, 0.8);
+  color: white;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.remove-item-btn:hover {
+  background-color: rgba(230, 50, 50, 1);
+}
+
+/* Empty Slot Plus Sign */
+.empty-slot-plus {
+  font-size: 2rem;
+  color: rgba(150, 150, 180, 0.5);
+}
+
+/* Stable tooltip class to prevent flickering */
+.stable-tooltip {
+  width: max-content;
+  max-width: 300px;
+  min-width: 200px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .game-board {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .game-board {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

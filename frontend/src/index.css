@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #2c2a4a;
+    --secondary-color: #4f518c;
+    --accent-color: #907ad6;
+    --text-color: #f7f7f7;
+    --background-color: #1a1a2e;
+    --card-color: #242444;
+    --border-color: #4a4a6a;
+    --success-color: #4caf50;
+    --error-color: #f44336;
+    --warning-color: #ff9800;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  input, select {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 16px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Dooley",
+    "slug": "dooley",
+    "description": "A resourceful engineer with mechanical expertise"
+  },
+  {
+    "name": "Pygmalien",
+    "slug": "pygmalien",
+    "description": "A magical sculptor who can bring creations to life"
+  },
+  {
+    "name": "Vanessa",
+    "slug": "vanessa",
+    "description": "A skilled marine biologist who commands aquatic creatures"
+  }
+]

@@ -1,0 +1,52 @@
+/* src/components/ItemTooltip/styles.css */
+.item-tooltip {
+  background-color: #1e1e33;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 15px;
+  min-width: 250px;
+  max-width: 320px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.tooltip-header {
+  margin-bottom: 10px;
+}
+
+.tooltip-title {
+  color: #a48bff; /* Purple color like in your reference */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.tooltip-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tooltip-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.tooltip-label {
+  font-weight: bold;
+  margin-right: 8px;
+  min-width: 80px;
+}
+
+.tooltip-value {
+  flex: 1;
+}
+
+.tooltip-loading {
+  text-align: center;
+  padding: 20px;
+  color: #a0a0a0;
+}
